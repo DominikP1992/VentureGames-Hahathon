@@ -1,0 +1,2 @@
+# VentureGames-Hahathon
+Zadanie konkursowe
