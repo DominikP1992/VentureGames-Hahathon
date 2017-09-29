@@ -1,22 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
 //components
 import ColorPicker from "./colorpicker.jsx";
 class App extends React.Component {
-    render(){
+    render() {
         return <div>
-            <ColorPicker/>
-        
+            <ColorPicker />
         </div>
     }
 }
 
-
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
     ReactDOM.render(
-        <App/>,
+        <App />,
         document.getElementById('app')
     );
 });

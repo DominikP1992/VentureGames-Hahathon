@@ -1,8 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ColorPickerOutput = (props) => (
     <div>
-        <h1 style={{ color: props.headerColor }}>{props.headerText}</h1>
+        <div style={{ "display": "flex", "marginBottom": "10px" }}>
+            <img src="./assets/img/edi.png" alt="Edi" />
+            <h1 style={{ color: props.headerColor }}>{props.headerText}</h1>
+        </div>
         {
             props.colorDisplay1.length > 0 && <div>
                 <div style={{
@@ -18,5 +22,13 @@ const ColorPickerOutput = (props) => (
         }
     </div>
 )
+
+ColorPickerOutput.propTypes = {
+    colorDisplay1: PropTypes.string.isRequired,
+    colorDisplay2: PropTypes.string.isRequired,
+    colorDisplay3: PropTypes.string.isRequired,
+    headerColor: PropTypes.string,
+    headerText: PropTypes.string,
+}
 
 export default ColorPickerOutput;

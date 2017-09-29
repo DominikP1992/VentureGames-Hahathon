@@ -1,5 +1,6 @@
 import React from 'react';
 import convert from 'color-convert';
+import PropTypes from 'prop-types';
 
 const regexRgb = /^rgb[(](?:\s*0*(?:\d\d?(?:\.\d+)?(?:\s*%)?|\.\d+\s*%|100(?:\.0*)?\s*%|(?:1\d\d|2[0-4]\d|25[0-5])(?:\.\d+)?)\s*(?:,(?![)])|(?=[)]))){3}[)]$/gm;
 const regexHex = /^#(?:[A-Fa-f0-9]{3}){1,2}$/gm;
@@ -11,6 +12,7 @@ export default class ColorPickerIput extends React.Component {
         arr[2] = arr[2] + "%";
         return `hsl(${arr.join()})`;
     }
+    
     convertColor = () => {
         const colorInput = this.colorInput.value;
         let headerText = "Znalazłem kolor w bazie ;)";
@@ -58,4 +60,8 @@ export default class ColorPickerIput extends React.Component {
             <button onClick={this.handlerClick}>Konwertuj z tym!</button>
         </div>
     }
+}
+
+ColorPickerIput.propTypes = {
+    getColors: PropTypes.func.isRequired
 }

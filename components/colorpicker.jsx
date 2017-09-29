@@ -11,6 +11,7 @@ export default class ColorPicker extends React.Component {
             headerColor: "Green",
             colorDisplay1: "",
             colorDisplay2: "",
+            colorDisplay3: "",
         }
     }
 
@@ -26,14 +27,14 @@ export default class ColorPicker extends React.Component {
 
     render() {
         return <div>
-            <ColorPickerOutput 
-            headerText={this.state.headerText}
-            headerColor={this.state.headerColor}
-            colorDisplay1={this.state.colorDisplay1}
-            colorDisplay2={this.state.colorDisplay2}
-            colorDisplay3={this.state.colorDisplay3}
-            /> 
-            <ColorPickerInput getColors={this.getColors}/>
+            <ColorPickerOutput
+                headerText={this.state.headerText}
+                headerColor={this.state.headerColor}
+                colorDisplay1={this.state.colorDisplay1}
+                colorDisplay2={this.state.colorDisplay2}
+                colorDisplay3={this.state.colorDisplay3}
+            />
+            <ColorPickerInput getColors={this.getColors} />
         </div>
     }
 }
