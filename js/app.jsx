@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 //components
-import ColorPicker from "./colorpicker.jsx";
+import ColorPicker from "./components/colorpicker.jsx";
 class App extends React.Component {
     render() {
         return <div>
